@@ -1,0 +1,14 @@
+# requirements.txt
+# Core
+bcrypt>=4.0.1
+
+# Para ler config.toml (Python < 3.11)
+tomli>=2.0.1
+
+# Para Python 3.11+, tomllib é built-in
+
+# Opcional: para cores no terminal do cliente
+colorama>=0.4.6
+
+# Opcional: para linha de comando interativa no cliente
+prompt_toolkit>=3.0.36

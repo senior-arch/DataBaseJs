@@ -1,0 +1,57 @@
+# config.toml
+# Configuração do servidor de banco de dados JSON
+
+[server]
+# Endereço e porta para o servidor ouvir
+host = "0.0.0.0"           # 0.0.0.0 para todas interfaces
+port = 5432                 # Porta padrão (similar ao PostgreSQL)
+max_workers = 10            # Máximo de threads simultâneas
+
+# Timeouts (em segundos)
+socket_timeout = 30         # Timeout de socket
+session_timeout = 3600       # Timeout de sessão (1 hora)
+
+[paths]
+# Diretórios e arquivos
+data_dir = "./data"          # Onde os bancos de dados serão armazenados
+users_file = "./users.json"  # Arquivo de usuários e permissões
+log_file = "./server.log"    # Arquivo de log
+
+[logging]
+# Configuração de logging
+level = "INFO"               # DEBUG, INFO, WARNING, ERROR
+format = "detailed"          # simple, detailed, json
+max_size_mb = 10             # Tamanho máximo do arquivo de log (rotação)
+backup_count = 5             # Número de arquivos de backup
+
+[security]
+# Configurações de segurança
+
+# SSL/TLS (opcional - descomente para ativar)
+# cert_file = "./certs/server.crt"
+# key_file = "./certs/server.key"
+# ca_file = "./certs/ca.crt"           # Para autenticação de cliente
+# require_client_cert = false          # Exigir certificado do cliente
+
+# Política de senhas
+password_min_length = 6
+password_require_uppercase = false
+password_require_digit = false
+
+[performance]
+# Ajustes de performance
+cache_schemas = true                    # Manter schemas em cache
+cache_ttl_seconds = 300                  # Tempo de vida do cache (5 minutos)
+lock_timeout_seconds = 5                 # Timeout para adquirir locks
+use_atomic_writes = true                 # Usar escrita atômica com arquivos temporários
+
+[database]
+# Configurações padrão para novos bancos
+default_charset = "utf-8"
+default_collation = "utf8_general_ci"
+
+# Limites
+max_db_name_length = 64
+max_table_name_length = 64
+max_column_name_length = 64
+max_records_per_table = 1000000           # 1 milhão (ajuste conforme necessidade)
