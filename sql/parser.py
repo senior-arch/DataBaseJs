@@ -1,5 +1,5 @@
 # sql/parser.py
-from typing import List, Optional
+from typing import List, Optional, Any, Union  # <-- ADICIONE Any AQUI
 from .lexer import Token, TokenType, Lexer
 from .ast import (
     Command, CreateDatabase, DropDatabase, UseDatabase,

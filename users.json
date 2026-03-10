@@ -1,0 +1,8 @@
+{
+  "admin": {
+    "password_hash": "$2b$12$d97iO91nnoDWWFvkAHptK.dQbWrG9e6Vs65rw1OeDY4QwksdfYfjO",
+    "permissions": [
+      "*"
+    ]
+  }
+}

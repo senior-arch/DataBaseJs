@@ -1,0 +1,5 @@
+2026-03-09 22:19:02,934 - servidor.main - INFO - Iniciando servidor...
+2026-03-09 22:19:02,936 - servidor.server - INFO - Servidor ouvindo em 0.0.0.0:5432
+2026-03-09 22:21:37,095 - servidor.server - INFO - Conexão recebida de ('127.0.0.1', 53728)
+2026-03-09 22:21:37,096 - servidor.session - INFO - Nova conexão de ('127.0.0.1', 53728)
+2026-03-09 22:21:37,149 - servidor.session - INFO - Conexão encerrada: ('127.0.0.1', 53728)
